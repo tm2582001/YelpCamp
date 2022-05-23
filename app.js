@@ -169,6 +169,8 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error", { err });
 });
 
-app.listen(8080, () => {
-  console.log("server started at 8080");
+const port = process.env.PORT || 8080
+
+app.listen(port, () => {
+  console.log(`server started at ${port}`);
 });
